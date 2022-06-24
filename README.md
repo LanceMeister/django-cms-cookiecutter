@@ -1,4 +1,4 @@
-# Django CMS Cookiecutter 
+# Cookiecutter Django CMS 
 
 [![Build Status](https://img.shields.io/github/workflow/status/cookiecutter/cookiecutter-django/CI/master)](https://github.com/cookiecutter/cookiecutter-django/actions?query=workflow%3ACI)
 [![Documentation Status](https://readthedocs.org/projects/cookiecutter-django/badge/?version=latest)](https://cookiecutter-django.readthedocs.io/en/latest/?badge=latest)
@@ -7,8 +7,8 @@
 [![Code Helpers Badge](https://www.codetriage.com/cookiecutter/cookiecutter-django/badges/users.svg)](https://www.codetriage.com/cookiecutter/cookiecutter-django)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
-Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), Cookiecutter Django is a framework for jumpstarting
-production-ready Django projects quickly.
+Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), Cookiecutter Django CMS is a framework for jumpstarting
+production-ready Django CMS projects quickly.
 
 -   Documentation: <https://cookiecutter-django.readthedocs.io/en/latest/>
 -   See [Troubleshooting](https://cookiecutter-django.readthedocs.io/en/latest/troubleshooting.html) for common errors and obstacles
@@ -17,10 +17,11 @@ production-ready Django projects quickly.
 
 ## Features
 
--   For Django 3.2
+-   For Django 3.1.4
+-   django-cms==3.8.0
 -   Works with Python 3.9
 -   Renders Django projects with 100% starting test coverage
--   Twitter [Bootstrap](https://github.com/twbs/bootstrap) v5
+-   Twitter [Bootstrap](https://github.com/twbs/bootstrap) v4
 -   [12-Factor](http://12factor.net/) based settings via [django-environ](https://github.com/joke2k/django-environ)
 -   Secure by default. We believe in SSL.
 -   Optimized development and production settings
@@ -52,31 +53,6 @@ production-ready Django projects quickly.
 -   Uses PostgreSQL everywhere: 10.19 - 14.1 ([MySQL fork](https://github.com/mabdullahadeel/cookiecutter-django-mysql) also available).
 -   Environment variables for configuration (This won't work with Apache/mod_wsgi).
 
-## Support this Project!
-
-This project is run by volunteers. Please support them in their efforts to maintain and improve Cookiecutter Django:
-
--   Daniel Roy Greenfeld, Project Lead ([GitHub](https://github.com/pydanny), [Patreon](https://www.patreon.com/danielroygreenfeld)): expertise in Django and AWS ELB.
--   Nikita Shupeyko, Core Developer ([GitHub](https://github.com/webyneter)): expertise in Python/Django, hands-on DevOps and frontend experience.
-
-Projects that provide financial support to the maintainers:
-
-------------------------------------------------------------------------
-
-<p align="center">
-  <a href="https://www.feldroy.com/products//two-scoops-of-django-3-x"><img src="https://cdn.shopify.com/s/files/1/0304/6901/products/Two-Scoops-of-Django-3-Alpha-Cover_540x_26507b15-e489-470b-8a97-02773dd498d1_1080x.jpg"></a>
-</p>
-
-Two Scoops of Django 3.x is the best ice cream-themed Django reference in the universe!
-
-### PyUp
-
-<p align="center">
-  <a href="https://pyup.io/"><img src="https://pyup.io/static/images/logo.png"></a>
-</p>
-
-PyUp brings you automated security and dependency updates used by Google and other organizations. Free for open source projects!
-
 ## Usage
 
 Let's pretend you want to create a Django project called "redditclone". Rather than using `startproject`
@@ -88,11 +64,11 @@ First, get Cookiecutter. Trust me, it's awesome:
 
 Now run it against this repo:
 
-    $ cookiecutter https://github.com/cookiecutter/cookiecutter-django
+    $ cookiecutter https://github.com/LanceMeister/django-cms-cookiecutter
 
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
-**Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
+**Warning**: After this point, change 'Lance Meister', 'pymeister', etc to your own information.
 
 Answer the prompts with your own desired [options](http://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html). For example:
 
@@ -102,11 +78,11 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     remote: Total 550 (delta 283), reused 479 (delta 222)
     Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
     Resolving deltas: 100% (283/283), done.
-    project_name [My Awesome Project]: Reddit Clone
-    project_slug [reddit_clone]: reddit
-    description [Behold My Awesome Project!]: A reddit clone.
-    author_name [Daniel Roy Greenfeld]: Daniel Greenfeld
-    domain_name [example.com]: myreddit.com
+    project_name [My Awesome Project]: Affiliate Website
+    project_slug [reddit_clone]: affiliate
+    description [Behold My Awesome Project!]: An Affilliate website.
+    author_name [Lance Meister]: Lance Meister
+    domain_name [example.com]: affiliate.com
     email [daniel-greenfeld@example.com]: pydanny@gmail.com
     version [0.1.0]: 0.0.1
     Select open_source_license:
@@ -166,7 +142,7 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
 
 Enter the project and take a look around:
 
-    $ cd reddit/
+    $ cd affiliate/
     $ ls
 
 Create a git repo and push it there:
@@ -174,7 +150,7 @@ Create a git repo and push it there:
     $ git init
     $ git add .
     $ git commit -m "first awesome commit"
-    $ git remote add origin git@github.com:pydanny/redditclone.git
+    $ git remote add origin git@github.com:LanceMeister/redditclone.git
     $ git push -u origin master
 
 Now take a look at your repo. Don't forget to carefully look at the generated README. Awesome, right?
@@ -194,10 +170,6 @@ For local development, see the following:
 
 You may notice that some elements of this project do not exactly match what we describe in chapter 3. The reason for that is this project, amongst other things, serves as a test bed for trying out new ideas and concepts. Sometimes they work, sometimes they don't, but the end result is that it won't necessarily match precisely what is described in the book I co-authored.
 
-## For PyUp Users
-
-If you are using [PyUp](https://pyup.io) to keep your dependencies updated and secure, use the code *cookiecutter* during checkout to get 15% off every month.
-
 ## "Your Stuff"
 
 Scattered throughout the Python and HTML of this project are places marked with "your stuff". This is where third-party libraries are to be integrated with your project.
@@ -208,7 +180,7 @@ https://github.com/mabdullahadeel/cookiecutter-django-mysql
 
 ## Releases
 
-Need a stable release? You can find them at <https://github.com/cookiecutter/cookiecutter-django/releases>
+Need a stable release? You can find them at <https://github.com/LanceMeister/django-cms-cookiecutter/releases>
 
 ## Not Exactly What You Want?
 
@@ -243,4 +215,4 @@ experience better.
 -   [Development and Deployment of Cookiecutter-Django via Docker](https://realpython.com/blog/python/development-and-deployment-of-cookiecutter-django-via-docker/) - Dec. 29, 2015
 -   [How to create a Django Application using Cookiecutter and Django 1.8](https://www.swapps.io/blog/how-to-create-a-django-application-using-cookiecutter-and-django-1-8/) - Sept. 12, 2015
 
-Have a blog or online publication? Write about your cookiecutter-django tips and tricks, then send us a pull request with the link.
+
