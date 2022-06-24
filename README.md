@@ -18,7 +18,7 @@ production-ready Django CMS projects quickly.
 ## Features
 
 -   For Django 3.1.4
--   django-cms==3.8.0
+-   django-cms 3.8.0
 -   Works with Python 3.9
 -   Renders Django projects with 100% starting test coverage
 -   Twitter [Bootstrap](https://github.com/twbs/bootstrap) v4
